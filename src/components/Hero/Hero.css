@@ -1,0 +1,210 @@
+/* ================= HERO SECTION ================= */
+
+.hero {
+  /* Mobile-safe height handling */
+  min-height: calc(100vh - 80px); /* navbar height */
+  padding-top: 80px;
+
+  display: flex;
+  align-items: center;
+  background: #0a0a0a;
+  padding-left: 8%;
+  padding-right: 8%;
+}
+
+/* Container */
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 20px;
+}
+
+/* ================= LEFT CONTENT ================= */
+
+.hero-content {
+  flex: 1;
+}
+
+/* Title */
+.hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+  white-space: nowrap; /* 🔥 keeps full name in one line */
+}
+
+/* Animated Name */
+.name-animate {
+  color: #00e5ff;
+  display: inline-block;
+  animation: slideFade 1s ease forwards;
+}
+
+/* Role */
+.hero-content h2 {
+  font-size: 1.8rem;
+  margin: 15px 0;
+  color: #cfd8dc;
+}
+
+/* Animated Role */
+.role-animate {
+  opacity: 0;
+  animation: fadeUp 1.2s ease forwards;
+  animation-delay: 0.3s;
+}
+
+/* Description */
+.hero-content p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #b0bec5;
+  max-width: 500px;
+}
+/* Hover effect for name */
+.name-animate {
+  transition: color 0.3s ease, text-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.name-animate:hover {
+  color: #ffffff;
+  text-shadow: 0 0 12px rgba(0, 229, 255, 0.8);
+  transform: translateY(-2px);
+  cursor: pointer;
+}
+
+/* ================= BUTTONS ================= */
+
+.hero-buttons {
+  margin-top: 30px;
+  display: flex;
+  gap: 20px;
+}
+
+.btn {
+  padding: 12px 26px;
+  border-radius: 30px;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn.primary {
+  background: #00e5ff;
+  color: #000;
+  font-weight: 600;
+}
+
+.btn.primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(0, 229, 255, 0.4);
+}
+
+.btn.secondary {
+  border: 2px solid #00e5ff;
+  color: #00e5ff;
+}
+
+.btn.secondary:hover {
+  background: #00e5ff;
+  color: #000;
+}
+
+/* ================= RIGHT IMAGE ================= */
+
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+/* Image animation wrapper */
+.image-animate {
+  opacity: 0;
+  animation: zoomIn 1.2s ease forwards;
+  animation-delay: 0.4s;
+}
+
+.hero-image img {
+  width: 320px;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #00e5ff;
+  box-shadow: 0 0 40px rgba(0, 229, 255, 0.4);
+}
+
+/* ================= ANIMATIONS ================= */
+
+@keyframes slideFade {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ================= MOBILE FIX ================= */
+
+@media (max-width: 900px) {
+  .hero {
+    min-height: auto;          /* 🔥 critical mobile fix */
+    padding-top: 100px;        /* navbar + spacing */
+    padding-bottom: 40px;
+  }
+
+  .hero-container {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .hero-title {
+    font-size: 2.4rem;
+    white-space: normal; /* allow wrap on very small screens */
+  }
+
+  .hero-image img {
+    width: 260px;
+    height: 260px;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+/* Hover effect for profile image */
+.hero-image img {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.hero-image img:hover {
+  transform: scale(1.06);
+  box-shadow: 0 0 60px rgba(0, 229, 255, 0.6);
+}

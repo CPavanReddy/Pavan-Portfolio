@@ -1,0 +1,82 @@
+.about {
+  padding: 70px 20px;
+  background-color: #0f0f0f;
+}
+
+.about-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Section Title */
+.section-title {
+  font-size: 2.6rem;
+  color: #00e5ff;
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+
+/* Paragraph Text */
+.about-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #cfd8dc;
+  margin-bottom: 18px;
+  max-width: 850px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Info Cards */
+.about-info {
+  margin-top: 45px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+/* Single Card */
+.about-info div {
+  background: #141414;
+  padding: 22px 25px;
+  border-radius: 14px;
+  border: 1px solid rgba(0, 229, 255, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+}
+
+/* Hover Effect */
+.about-info div:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 35px rgba(0, 229, 255, 0.15);
+}
+
+/* Emoji / Icon */
+.about-info span {
+  font-size: 1.6rem;
+  display: inline-block;
+  margin-bottom: 8px;
+}
+
+/* Text inside card */
+.about-info p {
+  font-size: 0.95rem;
+  color: #e0e0e0;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2.1rem;
+  }
+
+  .about-text {
+    font-size: 1rem;
+  }
+
+  .about-info {
+    gap: 18px;
+  }
+}
