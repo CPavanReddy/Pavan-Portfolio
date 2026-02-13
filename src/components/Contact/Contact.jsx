@@ -12,7 +12,7 @@ const Contact = () => {
 
         <div className="contact-grid">
 
-          <a href="https://linkedin.com/in/c-pavan-kumar-reddy-7120bb2b2" target="_blank" className="contact-item">
+          <a href="https://www.linkedin.com/in/cpavankumarreddy-mern-developer-fresher" target="_blank" className="contact-item">
             🔗 LinkedIn
           </a>
 
@@ -20,7 +20,7 @@ const Contact = () => {
             💻 GitHub
           </a>
 
-          <a href="https://your-portfolio.vercel.app" target="_blank" className="contact-item">
+          <a href="https://cpavankumarreddy.vercel.app/" target="_blank" className="contact-item">
             🌐 Portfolio
           </a>
 

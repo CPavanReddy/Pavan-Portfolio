@@ -39,16 +39,19 @@ const Projects = () => {
             </div>
           </div>
           <div className="project-card">
-            <h3>Laboratory Website</h3>
+            <h3> Diagnostic Laboratory Management System</h3>
             <p>
               Designed and developed a responsive laboratory website with
               service listings, test information, and contact features to
               improve online presence and accessibility.
             </p>
             <div className="tech-stack">
-              <span>React</span>
+              <span>HTML</span>
               <span>CSS</span>
               <span>JavaScript</span>
+              <span>REACT.JS</span>
+              <span>Node.js</span>
+              <span>Express</span>
             </div>
           </div>
           <div className="project-card">
